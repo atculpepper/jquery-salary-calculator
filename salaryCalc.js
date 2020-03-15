@@ -36,6 +36,12 @@ function submitEmployeeData(event) {
   };
   employees.push(newEmployee);
   console.log("Employees in array: ", employees);
+  //clear out the values
+  $(".js-firstNameInput").val("");
+  $(".js-lastNameInput").val("");
+  $(".js-idInput").val("");
+  $(".js-titleInput").val("");
+  $(".js-annualSalaryInput").val("");
   render();
 }
 //make everything show up in the table on the DOM
