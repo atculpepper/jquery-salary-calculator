@@ -7,12 +7,20 @@ function init() {
   console.log("Welcome to the salaryCalc!");
   $(".js-inputEmployeeData").on("submit", submitEmployeeData);
   $(".js-table-body").on("click", ".js-btn-delete", deleteEmployee);
-
   //   $(".js-inputEmployeeData").on("click", clickEmployeeData);
 }
 
-function deleteEmployee() {
+function deleteEmployee(event) {
+  console.log("I am trying to delete", event);
   console.log("I am trying to delete", this);
+
+  const employeeIndex = $(this).data("index");
+  console.log("testing logging out index:", employeeIndex);
+
+  //create a function to adjust monthlySalary since I didn't remove it from array
+
+  employees.splice(employeeIndex, 1);
+  render();
 }
 
 function submitEmployeeData(event) {
@@ -48,7 +56,7 @@ function render() {
   <td>${individualEmployee.ID}</td>
   <td>${individualEmployee.Title}</td>
   <td>$${individualEmployee.annualSalary}</td>
-  <td><button class = "js-btn-delete">Delete</button></td>
+  <td><button class = "js-btn-delete"data-index =${i} ">Delete</button></td>
   </tr>`);
   }
   //add all annualSalaries
