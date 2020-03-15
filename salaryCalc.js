@@ -6,7 +6,13 @@ const employees = [];
 function init() {
   console.log("Welcome to the salaryCalc!");
   $(".js-inputEmployeeData").on("submit", submitEmployeeData);
+  $(".js-table-body").on("click", ".js-btn-delete", deleteEmployee);
+
   //   $(".js-inputEmployeeData").on("click", clickEmployeeData);
+}
+
+function deleteEmployee() {
+  console.log("I am trying to delete", this);
 }
 
 function submitEmployeeData(event) {
@@ -42,7 +48,7 @@ function render() {
   <td>${individualEmployee.ID}</td>
   <td>${individualEmployee.Title}</td>
   <td>$${individualEmployee.annualSalary}</td>
-  <td><button>Delete</button></td>
+  <td><button class = "js-btn-delete">Delete</button></td>
   </tr>`);
   }
   //add all annualSalaries
