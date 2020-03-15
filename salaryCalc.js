@@ -22,6 +22,26 @@ function submitEmployeeData(event) {
   };
   employees.push(newEmployee);
   console.log("Employees in array: ", employees);
+  render();
+}
+//make everything show up in the table on the DOM
+function render() {
+  $(".js-table-body").empty();
+  let totalSalary = 0;
+  for (let i = 0; i < employees.length; i++) {
+    //TODO: make this add employeeData to DOM
+    const individualEmployee = employees[i];
+
+    $(".js-table-body").append(`
+  <tr>
+  <td>${individualEmployee.firstName}</td>
+  <td>${individualEmployee.lastName}</td>
+  <td>${individualEmployee.ID}</td>
+  <td>${individualEmployee.Title}</td>
+  <td>$${individualEmployee.AnnualSalary}</td>
+  </tr>`);
+  }
+  //add all annualSalaries
 }
 
 //function render() {}
