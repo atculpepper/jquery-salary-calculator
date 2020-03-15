@@ -18,7 +18,7 @@ function submitEmployeeData(event) {
     lastName: $(".js-lastNameInput").val(),
     ID: parseFloat($(".js-idInput").val()),
     Title: $(".js-titleInput").val(),
-    AnnualSalary: parseFloat($(".js-annualSalaryInput").val())
+    annualSalary: parseFloat($(".js-annualSalaryInput").val())
   };
   employees.push(newEmployee);
   console.log("Employees in array: ", employees);
@@ -28,9 +28,12 @@ function submitEmployeeData(event) {
 function render() {
   $(".js-table-body").empty();
   let totalSalary = 0;
+  let monthlySalary = 0;
+
   for (let i = 0; i < employees.length; i++) {
     //TODO: make this add employeeData to DOM
     const individualEmployee = employees[i];
+    monthlySalary = (totalSalary += individualEmployee.annualSalary) / 12;
 
     $(".js-table-body").append(`
   <tr>
@@ -38,10 +41,12 @@ function render() {
   <td>${individualEmployee.lastName}</td>
   <td>${individualEmployee.ID}</td>
   <td>${individualEmployee.Title}</td>
-  <td>$${individualEmployee.AnnualSalary}</td>
+  <td>$${individualEmployee.annualSalary}</td>
+  <td><button>Delete</button></td>
   </tr>`);
   }
   //add all annualSalaries
+  $(".js-totalMonthly").text(monthlySalary);
 }
 
 //function render() {}
