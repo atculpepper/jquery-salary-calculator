@@ -14,7 +14,7 @@
     </header>
 
         <!--creating form with input fields for adding employee data-->
-
+<div class = "allOfTheThings">
     <form class="js-inputEmployeeData">
         <input type="text" placeholder="First Name" class="js-firstNameInput" id="firstName" name="firstName"/>
         <input type="text" placeholder="Last Name" class="js-lastNameInput" id="lastName"name="lastName"/>
@@ -22,11 +22,13 @@
 
         <input type="text" placeholder="Title" class="js-titleInput" id="title" name="title"/>
        $<input type = "number" placeholder="Annual Salary" class="js-annualSalaryInput" id="annualSalary"name="annualSalary"/>
+       <br></br>
         <button class="js-btn-employeeDataSubmit"type="submit">Submit</button>
     </form>
 
+
             <!--make a table to represent employee data-->
-        <table class=js-table>
+        <table class="js-table">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -49,15 +51,15 @@
                     <td>003</td>
                     <td>Software Engineer</td>
                     <td>65,000.00</td>
-                    <td><button class="js-btn-delete"></button></td>
+                    <td><button class="js-btn-delete">Delete</button></td>
                 </tr>
             </tbody>
         </table>
 
             <!--display total monthly salary-->
-<div>
-    Total Monthly: $<span class=js-totalMonthly>0.00</span>
+    <div class="totalMonthlyDiv">
+    Total Monthly: $<span class="js-totalMonthly">0.00</span>
+    </div>
 </div>
-
   </body>
 </html>

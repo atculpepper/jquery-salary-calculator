@@ -1,0 +1,40 @@
+header {
+  background-color: rgb(22, 107, 22, 0.9);
+  color: rgb(250, 252, 214);
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 11px;
+}
+
+body {
+  margin: 0;
+}
+
+h2 {
+  text-align: left;
+  text-decoration-line: underline;
+  text-emphasis: emphasis;
+  margin: 5px 0 0 5px;
+}
+
+.js-btn-employeeDataSubmit {
+  margin-left: 534px;
+}
+
+.allOfTheThings {
+  padding: 15px;
+}
+
+.js-inputEmployeeData {
+  padding: 10px;
+}
+
+.js-table {
+  padding: 10px;
+}
+
+.totalMonthlyDiv {
+  text-align: right;
+  padding: 10px;
+  margin-right: 95px;
+}

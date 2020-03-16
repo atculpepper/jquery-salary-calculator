@@ -20,6 +20,9 @@ function deleteEmployee(event) {
   //create a function to adjust monthlySalary since I didn't remove it from array
 
   employees.splice(employeeIndex, 1);
+
+  $(".js-totalMonthly").css("background-color", "white");
+
   render();
 }
 
@@ -54,6 +57,9 @@ function render() {
     //TODO: make this add employeeData to DOM
     const individualEmployee = employees[i];
     monthlySalary = (totalSalary += individualEmployee.annualSalary) / 12;
+    if (monthlySalary > 20000.0) {
+      $(".js-totalMonthly").css("background-color", "red");
+    }
 
     $(".js-table-body").append(`
   <tr>
@@ -66,7 +72,8 @@ function render() {
   </tr>`);
   }
   //add all annualSalaries
-  $(".js-totalMonthly").text(monthlySalary);
+
+  $(".js-totalMonthly").text(Math.floor(monthlySalary * 100) / 100);
 }
 
 //function render() {}
