@@ -1,10 +1,17 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# jQuery Salary Calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This project's end goal was to build a company salary calculator to calculate total monthly salary costs. The presenting problem was that the client needed a way to add or delete employees with the click of a button while maintaining an up-to-date calculation of total monthly expenses.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
-# jquery-salary-calculator
+The solution involved creating a form and a table to collect and display employee data. In this program, employee data is collected on the DOM across 5 input categories (First Name, Last Name, ID, Title, and Annual Salary) The total monthly costs are displayed at the bottom right of the table of employees. Any addition or deletion of an employee will re-calculate company monthly expenses for employee salaries. Data from the submit event is collected by creating new objects that are pushed and stored into an "employees" array. To help keep tabs on expenses, the monthly expenses turn red when in excess of \$20,000.
+
+##Screen Shot
+/Users/anneculpepper/Desktop/Screen Shot 2020-03-15 at 8.34.39 PM.png
+
+##Built With
+JavaScript, HTML, CSS, jQuery
+
+## Acknowledgement
+
+Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality.
